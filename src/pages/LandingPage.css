@@ -1,0 +1,60 @@
+/* ============================================
+   LandingPage — Footer Responsive Only
+   ============================================ */
+
+/* ── Tablet (481px – 1024px) ── */
+@media (min-width: 481px) and (max-width: 1024px) {
+
+  .footer-conatiner > div:first-child {
+    grid-template-columns: 1fr 1fr 1fr !important;
+    gap: 2rem !important;
+    margin-bottom: 3rem !important;
+  }
+
+  .footer-conatiner > div:first-child > div:first-child {
+    grid-column: 1 / -1 !important;
+  }
+
+  .footer-conatiner > div:last-child {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    gap: 1rem !important;
+  }
+
+  .footer-conatiner > div:last-child > div {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    gap: 0.5rem !important;
+  }
+}
+
+/* ── Mobile (≤ 480px) ── */
+@media (max-width: 480px) {
+
+    .hero-header{
+        margin-left: 70px;
+    }
+
+  .footer-conatiner > div:first-child {
+    grid-template-columns: 1fr 1fr !important;
+    gap: 1.5rem !important;
+    margin-bottom: 2rem !important;
+  }
+
+  .footer-conatiner > div:first-child > div:first-child {
+    grid-column: 1 / -1 !important;
+  }
+
+  .footer-conatiner > div:last-child {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    gap: 0.8rem !important;
+    padding-top: 1.5rem !important;
+  }
+
+  .footer-conatiner > div:last-child > div {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    gap: 0.5rem !important;
+  }
+}

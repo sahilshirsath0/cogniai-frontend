@@ -1,3 +1,4 @@
+import './StudentDashboard.css';
 export const StudentDashboard = (user, events = [], registrations = [], filters = {}, invitations = []) => {
   const initials = user.name.split(' ').map(n => n[0]).join('');
   const registrationCount = registrations.length;
@@ -93,7 +94,7 @@ export const StudentDashboard = (user, events = [], registrations = [], filters 
           <div style="width: 32px; height: 32px; background: white; border-radius: 8px; display: flex; align-items: center; justify-content: center; color: var(--primary);">🤖</div>
           COGNI AI
         </div>
-        <div style="display: flex; gap: 1.5rem; align-items: center;">
+        <div class="student-header" style="display: flex; gap: 1.5rem; align-items: center;">
           <div class="profile-pill" onclick="window.app.showEditProfileModal()">
              <div class="avatar-small">${initials}</div>
              <span class="user-name-white">${user.name}</span>
@@ -102,9 +103,9 @@ export const StudentDashboard = (user, events = [], registrations = [], filters 
         </div>
       </nav>
 
-      <div class="container" style="position: relative; z-index: 10; padding-bottom: 5rem;">
-        <header class="student-hero">
-           <div class="hero-text">
+      <div class="container " style="position: relative; z-index: 10; padding-bottom: 5rem;">
+        <header class="student-hero ">
+           <div class="hero-text student-container student-diff">
               <div class="greeting-tag">STUDENT DASHBOARD</div>
               <h1>Innovate. Build. Learn.</h1>
               <p>The centralized hub for all your academic events and team collaborations.</p>

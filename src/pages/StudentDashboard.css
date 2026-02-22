@@ -1,0 +1,238 @@
+/* ============================================
+   StudentDashboard.css — Full Responsive
+   Mobile-first, covers all breakpoints.
+   ============================================ */
+
+/* ── Tablet (481px – 1024px) ────────────────── */
+@media (min-width: 481px) and (max-width: 1024px) {
+
+    .greeting-tag{
+        display: none;
+    }
+  /* Stack main feed + aside vertically */
+  div[style*="grid-template-columns: 1fr 380px"] {
+    grid-template-columns: 1fr !important;
+    gap: 2rem !important;
+  }
+
+
+
+
+
+  /* Aside: two panels side by side */
+  aside[style*="display: flex; flex-direction: column"] {
+    display: grid !important;
+    grid-template-columns: 1fr 1fr !important;
+    gap: 1.5rem !important;
+  }
+
+.student-hero {
+    flex-direction: column !important;
+    gap: 1.2rem !important;
+    margin-top: 4.5rem !important;
+  }
+
+
+  /* Event cards: 2 columns */
+  .student-events-grid {
+    grid-template-columns: 1fr 1fr !important;
+  }
+
+  /* Nav padding */
+  .student-nav {
+    padding: 1.2rem 4% !important;
+  }
+
+  /* Nav right side */
+  .student-header {
+    display: flex !important;
+    flex-direction: row !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    gap: 0.75rem !important;
+  }
+
+  .profile-pill {
+    margin-top: 8px;
+    flex: 0.5 !important;
+    min-width: 0 !important;
+  }
+
+  .user-name-white {
+    overflow: hidden !important;
+    text-overflow: ellipsis !important;
+    white-space: nowrap !important;
+    max-width: 160px !important;
+  }
+
+  .logout-btn-minimal {
+    flex-shrink: 0 !important;
+    white-space: nowrap !important;
+  }
+
+  /* Sort dropdown */
+  .sort-select-premium {
+    width: auto !important;
+  }
+}
+
+/* ── Mobile (≤ 480px) ───────────────────────── */
+@media (max-width: 480px) {
+    .greeting-tag{
+        display: none;
+    }
+
+  /* ── Nav ── */
+  .student-nav {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    gap: 0.5rem !important;
+    padding: 1rem 4% !important;
+  }
+
+  .student-header {
+    width: 100% !important;
+    display: flex !important;
+    flex-direction: row !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    margin-top: 9px !important;
+    gap: 0.75rem !important;
+  }
+
+  .profile-pill {
+    margin-top: 7px;
+    flex: 0.5 !important;
+    min-width: 0 !important;
+    justify-content: flex-start !important;
+  }
+
+  .user-name-white {
+    overflow: hidden !important;
+    text-overflow: ellipsis !important;
+    white-space: nowrap !important;
+    max-width: 140px !important;
+  }
+
+  .logout-btn-minimal {
+    flex-shrink: 0 !important;
+    white-space: nowrap !important;
+  }
+
+  /* ── Hero background ── */
+  div[style*="clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%)"] {
+    clip-path: none !important;
+    height: 260px !important;
+  }
+
+  /* ── Hero section ── */
+  .student-hero {
+    flex-direction: column !important;
+    gap: 1.2rem !important;
+    margin-top: 4.5rem !important;
+  }
+
+  .student-container {
+    margin-top: 12px !important;
+  }
+
+  .student-hero h1 {
+    font-size: 1.7rem !important;
+    line-height: 1.2 !important;
+  }
+
+  .student-hero p {
+    font-size: 0.9rem !important;
+  }
+
+  .greeting-tag {
+    font-size: 0.65rem !important;
+  }
+
+  /* ── Stats grid ── */
+  .hero-stats-grid {
+    display: flex !important;
+    gap: 0.75rem !important;
+    width: 100% !important;
+  }
+
+  .stat-card {
+    flex: 1 !important;
+    min-width: 0 !important;
+    padding: 1rem !important;
+  }
+
+  .stat-value {
+    font-size: 1.8rem !important;
+  }
+
+  /* ── Main grid: stack ── */
+  div[style*="grid-template-columns: 1fr 380px"] {
+    grid-template-columns: 1fr !important;
+    gap: 1.5rem !important;
+    margin-top: 2rem !important;
+  }
+
+  /* ── Discovery feed header ── */
+  div[style*="display: flex; justify-content: space-between; align-items: center; margin-bottom: 2rem"] {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    gap: 0.75rem !important;
+  }
+
+  .sort-select-premium {
+    width: 100% !important;
+  }
+
+  /* ── Event cards: single column ── */
+  .student-events-grid {
+    grid-template-columns: 1fr !important;
+    gap: 1rem !important;
+  }
+
+  /* ── Aside: stack vertically ── */
+  aside[style*="display: flex; flex-direction: column"] {
+    flex-direction: column !important;
+    gap: 1.2rem !important;
+  }
+
+  /* ── Glass sections ── */
+  .glass-section {
+    padding: 1.2rem !important;
+    border-radius: 16px !important;
+  }
+
+  /* ── Invitation buttons ── */
+  div[style*="display: flex; gap: 0.5rem"] {
+    flex-direction: column !important;
+  }
+
+  div[style*="display: flex; gap: 0.5rem"] button {
+    width: 100% !important;
+  }
+
+  /* ── Activity item ── */
+  .activity-item {
+    padding: 1rem !important;
+  }
+
+  /* ── Section heading ── */
+  h2[style*="font-size: 1.8rem"] {
+    font-size: 1.3rem !important;
+  }
+
+  /* ── Container padding ── */
+  .container {
+    padding-left: 4% !important;
+    padding-right: 4% !important;
+    padding-bottom: 3rem !important;
+  }
+
+  /* ── Modal ── */
+  .modal-content {
+    padding: 1.2rem !important;
+    margin: 1rem !important;
+    max-width: calc(100vw - 2rem) !important;
+    border-radius: 16px !important;
+  }
+}

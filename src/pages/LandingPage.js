@@ -1,3 +1,4 @@
+import "./LandingPage.css"
 export const LandingPage = () => {
   return `
     <div class="landing-page" style="position: relative;">
@@ -9,10 +10,10 @@ export const LandingPage = () => {
       </svg>
 
       <!-- Navbar -->
-      <nav style="height: 90px; padding: 0 5%; display: flex; align-items: center; justify-content: space-between; position: fixed; width: 100%; top: 0; z-index: 1000; transition: all 0.4s ease;">
-        <div class="logo" style="display: flex; align-items: center; gap: 0.8rem; text-decoration: none; cursor: pointer; padding-left: 10px;" onclick="window.scrollTo(0,0);">
+      <nav  style="height: 90px; padding: 0 5%; display: flex; align-items: center; justify-content: space-between; position: fixed; width: 100%; top: 0; z-index: 1000; transition: all 0.4s ease;">
+        <div class="logo " style="display: flex; align-items: center; gap: 0.8rem; text-decoration: none; cursor: pointer; padding-left: 10px;" onclick="window.scrollTo(0,0);">
           <img src="/logo.svg" alt="COGNI AI Logo" style="height: 65px; width: auto; filter: drop-shadow(0 4px 6px rgba(0,0,0,0.1));" onerror="this.src='/logo.svg'" />
-          <span style="font-size: 1.6rem; color: var(--primary); font-weight: 800; font-family: 'Poppins', sans-serif;">COGNI AI</span>
+          <span class="hero-header" style="font-size: 1.6rem; color: var(--primary); font-weight: 800; font-family: 'Poppins', sans-serif;">COGNI AI</span>
         </div>
         <div class="nav-links" style="display: flex; gap: 2.5rem; align-items: center;">
           <a href="#about" style="text-decoration: none; color: var(--text-main); font-weight: 600; font-size: 0.95rem;">About</a>
@@ -351,7 +352,7 @@ export const LandingPage = () => {
 
       <!-- 9. PROFESSIONAL FOOTER -->
       <footer>
-        <div class="container">
+        <div class="container footer-conatiner">
           <div style="display: grid; grid-template-columns: repeat(5, 1fr); gap: 3rem; margin-bottom: 6rem;">
             <!-- Col 1 -->
             <div style="grid-column: span 1.5;">

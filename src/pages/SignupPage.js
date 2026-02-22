@@ -71,7 +71,7 @@ export const SignupPage = () => {
                 <input type="password" name="retype" placeholder="••••••••" required>
               </div>
             </div>
-            <button type="submit" class="btn btn-primary auth-btn">Create Student Account</button>
+            <button type="submit" class="btn btn-primary auth-btn" onclick="this.disabled=true; this.textContent='Creating Account...'; this.form.requestSubmit()">Create Student Account</button>
           </form>
 
           <!-- Faculty Signup Form -->

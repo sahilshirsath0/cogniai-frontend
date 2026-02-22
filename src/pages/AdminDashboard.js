@@ -1,11 +1,12 @@
+import './admin-dashboard-reponsive.css';
 export const AdminDashboard = (user, stats = {}) => {
    return `
-    <div class="dashboard-container" style="background: #F8FAFC; min-height: 100vh; position: relative; overflow-x: hidden;">
+    <div class="dashboard-container " style="background: #F8FAFC; min-height: 100vh; position: relative; overflow-x: hidden;">
       <div style="position: absolute; top: 0; left: 0; width: 100%; height: 400px; background: linear-gradient(135deg, #0F172A 0%, #1E293B 100%); z-index: 0; clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);"></div>
 
-      <nav style="position: relative; z-index: 10; padding: 1.5rem 5%; display: flex; justify-content: space-between; align-items: center; color: #1E293B;">
-        <div class="logo" style="display: flex; align-items: center; gap: 0.8rem; text-decoration: none; cursor: pointer; color: #3B82F6;" onclick="window.scrollTo(0,0);">
-          <div style="background: white; padding: 4px; border-radius: 8px; display: inline-flex; align-items: center; justify-content: center; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
+      <nav class="" style="position: relative; z-index: 10; padding: 1.5rem 5%; display: flex; justify-content: space-between; align-items: center; color: #1E293B;">
+        <div class="logo logodiv" style="display: flex; align-items: center; gap: 0.8rem; text-decoration: none; cursor: pointer; color: #3B82F6;" onclick="window.scrollTo(0,0);">
+          <div class="increaseme" style="background: white; padding: 4px; border-radius: 8px; display: inline-flex; align-items: center; justify-content: center; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
             <img src="/logo.svg" alt="COGNI AI Logo" style="height: 38px; width: auto;" onerror="this.src='/logo.svg'" />
           </div>
           <span style="font-size: 1.5rem; font-weight: 800; font-family: 'Poppins', sans-serif;">COGNI AI <span style="font-weight: 500; opacity: 0.9; font-size: 1.1rem; color: #60A5FA;">ADMIN PANEL</span></span>
@@ -61,11 +62,12 @@ export const AdminDashboard = (user, stats = {}) => {
               
               <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(450px, 1fr)); gap: 2.5rem;">
                  ${(stats.events || []).length > 0 ? (stats.events || []).map(event => `
-                   <div style="padding: 2rem; border-radius: 24px; border: 1px solid #F1F5F9; background: #FFFFFF; display: flex; justify-content: space-between; align-items: center; transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1); cursor: pointer; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.02);" 
+                   <div class="event-card" style="padding: 2rem; border-radius: 24px; border: 1px solid #F1F5F9; background: #FFFFFF; display: flex; justify-content: space-between; align-items: center; transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1); cursor: pointer; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.02);" 
                         onmouseover="this.style.borderColor='var(--primary)'; this.style.transform='translateY(-8px)'; this.style.boxShadow='0 20px 25px -5px rgba(0,0,0,0.05)';" 
                         onmouseout="this.style.borderColor='#F1F5F9'; this.style.transform='none'; this.style.boxShadow='0 4px 6px -1px rgba(0,0,0,0.02)';">
-                      <div style="display: flex; gap: 2rem; align-items: center;">
-                         <div style="width: 100px; height: 100px; border-radius: 20px; overflow: hidden; background: white; border: 1px solid #E2E8F0; padding: 4px; background: #F8FAFC;">
+                    
+<div class="event-card__left" style="display: flex; gap: 2rem; align-items: center;">
+                         <div class="event-card__thumb" style="width: 100px; height: 100px; border-radius: 20px; overflow: hidden; background: #F8FAFC;">
                             <img src="${event.image || 'https://images.unsplash.com/photo-1591115765373-5207764f72e7?q=80&w=1000&auto=format&fit=crop'}" style="width: 100%; height: 100%; object-fit: cover; border-radius: 16px;">
                          </div>
                          <div>
@@ -76,7 +78,7 @@ export const AdminDashboard = (user, stats = {}) => {
                             </div>
                          </div>
                       </div>
-                      <div style="text-align: right; background: #F8FAFC; padding: 1.5rem; border-radius: 20px; border: 1px solid #F1F5F9; min-width: 140px;">
+                      <div class="event-card__stats style="text-align: right; background: #F8FAFC; padding: 1.5rem; border-radius: 20px; border: 1px solid #F1F5F9; min-width: 140px;">
                          <div style="font-size: 2.2rem; font-weight: 800; color: var(--primary); line-height: 1;">${event.registrationCount || 0}</div>
                          <div style="font-size: 0.75rem; font-weight: 800; color: #94A3B8; text-transform: uppercase; margin-top: 0.4rem; letter-spacing: 0.05em;">Confirmed</div>
                       </div>

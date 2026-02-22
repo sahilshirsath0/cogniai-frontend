@@ -1,0 +1,312 @@
+/* ============================================
+   AdminDashboard — Mobile Responsive Overrides
+   ADDITIVE ONLY: No existing styles are changed.
+   All rules are scoped inside media queries.
+   ============================================ */
+
+/* ── Tablet & below (≤ 1024px) ─────────────── */
+@media (max-width: 1024px) {
+  .grid-3 {
+    grid-template-columns: 1fr 1fr !important;
+  }
+}
+
+/* ── Mobile (≤ 768px) ───────────────────────── */
+@media (max-width: 768px) {
+
+  /* Nav — stack logo and buttons */
+  nav {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    gap: 0.75rem !important;
+    padding: 1rem 4% !important;
+  }
+
+  /* Nav right side: wrap "Verified Principal" + Sign Out neatly */
+  nav > div:last-child {
+    display: flex !important;
+    flex-direction: row !important;
+    flex-wrap: wrap !important;
+    gap: 0.6rem !important;
+    width: 100% !important;
+    align-items: center !important;
+  }
+
+  nav > div:last-child span {
+    flex: 1 1 auto !important;
+    font-size: 0.78rem !important;
+    padding: 0.45rem 0.9rem !important;
+  }
+
+  nav > div:last-child button {
+    flex-shrink: 0 !important;
+  }
+
+  /* Hero header */
+  header {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    gap: 1.2rem !important;
+    margin-top: 1.2rem !important;
+    margin-bottom: 2rem !important;
+  }
+
+  header h1 {
+    font-size: 2.2rem !important;
+  }
+
+  header > div:last-child {
+    width: 100% !important;
+  }
+
+  header > div:last-child button {
+    width: 100% !important;
+  }
+
+  /* Stat cards — stack to single column */
+  .grid-3 {
+    grid-template-columns: 1fr !important;
+  }
+
+  /* Event traction section header */
+  div[style*="display: flex; justify-content: space-between; align-items: flex-end"] {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    gap: 1rem !important;
+  }
+
+  /* Event traction action row */
+  div[style*="display: flex; gap: 1rem; align-items: center"] {
+    flex-direction: column !important;
+    width: 100% !important;
+    gap: 0.75rem !important;
+  }
+
+  div[style*="display: flex; gap: 1rem; align-items: center"] button,
+  div[style*="display: flex; gap: 1rem; align-items: center"] span {
+    width: 100% !important;
+    text-align: center !important;
+    box-sizing: border-box !important;
+  }
+
+  /* Event cards grid — force single column */
+  div[style*="grid-template-columns: repeat(auto-fill, minmax(450px, 1fr))"] {
+    grid-template-columns: 1fr !important;
+  }
+
+  /* Individual event card — full block, vertical stack */
+  .event-card {
+    flex-direction: column !important;
+    align-items: stretch !important;
+    gap: 0 !important;
+    padding: 0 !important;
+    overflow: hidden !important;
+    border-radius: 24px !important;
+  }
+
+  /* Event card left block — image on top, text below */
+  .event-card__left {
+    flex-direction: column !important;
+    align-items: stretch !important;
+    gap: 0 !important;
+    width: 100% !important;
+  }
+
+  /* Event thumbnail — full width hero image */
+  .event-card__thumb {
+    width: 100% !important;
+    height: 220px !important;
+    min-height: 220px !important;
+    max-width: 100% !important;
+    border-radius: 0 !important;
+    border: none !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    background: #E2E8F0 !important;
+    box-sizing: border-box !important;
+    display: block !important;
+    overflow: hidden !important;
+  }
+
+  .event-card__thumb img {
+    display: block !important;
+    width: 100% !important;
+    height: 100% !important;
+    min-height: 220px !important;
+    object-fit: cover !important;
+    border-radius: 0 !important;
+    padding: 0 !important;
+  }
+
+  /* Text info block — padded content area below image */
+  .event-card__thumb + div {
+    padding: 1.2rem 1.4rem 0.8rem !important;
+  }
+
+  /* Event stats box — full width footer bar */
+  .event-card__stats {
+    width: 100% !important;
+    min-width: unset !important;
+    box-sizing: border-box !important;
+    border-radius: 0 !important;
+    border-top: 1px solid #F1F5F9 !important;
+    border-left: none !important;
+    border-right: none !important;
+    border-bottom: none !important;
+    padding: 1rem 1.4rem !important;
+    display: flex !important;
+    align-items: center !important;
+    gap: 0.8rem !important;
+    text-align: left !important;
+    margin-top: 0 !important;
+  }
+
+  .event-card__stats > div:first-child {
+    font-size: 2rem !important;
+    line-height: 1 !important;
+  }
+
+  .event-card__stats > div:last-child {
+    font-size: 0.8rem !important;
+  }
+
+  /* Modal */
+  .modal-content {
+    padding: 1.5rem !important;
+    border-radius: 20px !important;
+    margin: 1rem !important;
+    max-width: calc(100vw - 2rem) !important;
+  }
+
+  /* Modal form — single column */
+  .modal-content form {
+    grid-template-columns: 1fr !important;
+  }
+
+  .modal-content form .form-group[style*="grid-column: 1/-1"] {
+    grid-column: 1 !important;
+  }
+
+  .modal-content form button[type="submit"] {
+    grid-column: 1 !important;
+  }
+
+  /* Modal title */
+  .modal-content h2 {
+    font-size: 1.5rem !important;
+  }
+
+  /* Container horizontal padding */
+  .container {
+    padding-left: 4% !important;
+    padding-right: 4% !important;
+  }
+
+  /* Monitoring section card padding */
+  div[style*="background: white; border-radius: 32px; padding: 3rem"] {
+    padding: 1.5rem !important;
+    border-radius: 20px !important;
+  }
+
+  /* Clip-path hero bg — simplify on mobile */
+  div[style*="clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%)"] {
+    clip-path: none !important;
+    height: 300px !important;
+  }
+}
+
+/* ── Small mobile (≤ 480px) ─────────────────── */
+@media (max-width: 480px) {
+
+  nav {
+    
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    gap: 0.75rem !important;
+    padding: 1rem 4% !important;
+  }
+header {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    gap: 2.2rem !important;
+    margin-top: 3.2rem !important;
+    margin-bottom: 2rem !important;
+  }
+
+  header h1 {
+    font-size: 2.2rem !important;
+  }
+
+  header > div:last-child {
+    width: 100% !important;
+  }
+
+  header > div:last-child button {
+    width: 100% !important;
+  }
+
+
+  /* Nav right side: wrap "Verified Principal" + Sign Out neatly */
+  nav > div:last-child {
+    display: flex !important;
+    flex-direction: row !important;
+    flex-wrap: wrap !important;
+    gap: 0.6rem !important;
+    width: 100% !important;
+    align-items: center !important;
+  }
+
+  nav > div:last-child span {
+    flex: 1 1 auto !important;
+    font-size: 0.78rem !important;
+    padding: 0.45rem 0.9rem !important;
+  }
+
+  nav > div:last-child button {
+    flex-shrink: 0 !important;
+  }
+.increaseme{
+  height: 50px;
+}
+
+  /* Logo text */
+  .event-card__thumb{
+    .event-card__thumb img {
+    display: block !important;
+    width: 100% !important;
+    height: 100% !important;
+    min-height: 220px !important;
+    object-fit: cover !important;
+    border-radius: 0 !important;
+    padding: 0 !important;
+  }
+  
+  .logo span {
+    font-size: 1.1rem !important;
+  }
+
+  header h1 {
+    font-size: 1.8rem !important;
+  }
+
+  /* Dashboard stat numbers */
+  .dashboard-card > div[style*="font-size: 3.5rem"] {
+    font-size: 2.5rem !important;
+  }
+
+  /* Event card thumbnail even smaller */
+  div[style*="width: 100px; height: 100px; border-radius: 20px"] {
+    width: 56px !important;
+    height: 56px !important;
+  }
+
+  /* Event card title */
+  div[style*="font-weight: 800; color: #1E293B; font-size: 1.4rem"] {
+    font-size: 1.1rem !important;
+  }
+
+
+
+
+
+}}
