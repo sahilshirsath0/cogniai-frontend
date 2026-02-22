@@ -1,16 +1,38 @@
 import "./LandingPage.css"
 export const LandingPage = () => {
   return `
-    <div class="landing-page" style="position: relative;">
-      
-      <!-- Zigzag Network Line Background Overlay -->
-      <svg id="network-line-svg" viewBox="0 0 100 1000" preserveAspectRatio="none">
-        <path class="network-path" d="M15,0 L15,100 L85,200 L15,350 L85,500 L25,650 L75,800 L50,1000" />
-        <circle class="network-pulse-node" r="8" cx="15" cy="0" />
-      </svg>
+    <div class="landing-page" style="background-color: #F8FAFC;">
+
+  <!-- Top Header Bar -->
+  <div id="top-header">
+
+    <!-- Logos Row -->
+    <div class="header-logo-row">
+      <div class="header-logo-left">
+        <img src="/JSCOE_logo.png" alt="Left Logo" />
+      </div>
+      <div class="header-text">
+      <span class="header-subtitle">JAYAWANT SHIKSHAN PRASARAKH MANDAL's</span>
+      <span class="header-title">Jayawantrao Sawant College of Engineering, Pune.</span>
+    </div>
+      <div class="header-logo-right">
+        <img src="/jscoelogo2.jpg" alt="Right Logo" />
+      </div>
+    </div>
+
+    <!-- Center Text -->
+    
+
+  </div>
+
+  <!-- Zigzag Network Line Background Overlay -->
+  <svg id="network-line-svg" viewBox="0 0 100 1000" preserveAspectRatio="none">
+    <path class="network-path" d="M15,0 L15,100 L85,200 L15,350 L85,500 L25,650 L75,800 L50,1000" />
+    <circle class="network-pulse-node" r="8" cx="15" cy="0" />
+  </svg>
 
       <!-- Navbar -->
-      <nav  style="height: 90px; padding: 0 5%; display: flex; align-items: center; justify-content: space-between; position: fixed; width: 100%; top: 0; z-index: 1000; transition: all 0.4s ease;">
+      <nav c style=" margin-top:90px; height: 90px; padding: 0 5%; display: flex; align-items: center; justify-content: space-between; position: fixed; width: 100%; top: ; z-index: 1000; transition: all 0.4s ease;">
         <div class="logo " style="display: flex; align-items: center; gap: 0.8rem; text-decoration: none; cursor: pointer; padding-left: 10px;" onclick="window.scrollTo(0,0);">
           <img src="/logo.svg" alt="COGNI AI Logo" style="height: 65px; width: auto; filter: drop-shadow(0 4px 6px rgba(0,0,0,0.1));" onerror="this.src='/logo.svg'" />
           <span class="hero-header" style="font-size: 1.6rem; color: var(--primary); font-weight: 800; font-family: 'Poppins', sans-serif;">COGNI AI</span>
@@ -258,28 +280,30 @@ export const LandingPage = () => {
             <h2>Forum Leadership & Committee</h2>
           </div>
           <div class="grid grid-3" style="gap: 3rem;">
-            <div class="reveal stagger-1" style="text-align: center;">
-               <div style="width: 180px; height: 180px; border-radius: 50%; overflow: hidden; margin: 0 auto 2rem; border: 4px solid white; box-shadow: var(--shadow-soft);">
-                  <div style="width: 100%; height: 100%; background: var(--grad-primary); display: flex; align-items: center; justify-content: center; font-size: 5rem;">🏛️</div>
-               </div>
-               <h3 style="margin-bottom: 0.2rem;">Hon. Dr. T. J. Sawant</h3>
-               <p style="color: var(--primary); font-weight: 700; font-size: 0.9rem;">Chief Patron</p>
-            </div>
-            <div class="reveal stagger-2" style="text-align: center;">
-               <div style="width: 180px; height: 180px; border-radius: 50%; overflow: hidden; margin: 0 auto 2rem; border: 4px solid white; box-shadow: var(--shadow-soft);">
-                  <div style="width: 100%; height: 100%; background: var(--grad-primary); display: flex; align-items: center; justify-content: center; font-size: 5rem;">🎓</div>
-               </div>
-               <h3 style="margin-bottom: 0.2rem;">Dr. P. A. Patil</h3>
-               <p style="color: var(--primary); font-weight: 700; font-size: 0.9rem;">Chair Person (Principal JSCOE)</p>
-            </div>
-            <div class="reveal stagger-3" style="text-align: center;">
-               <div style="width: 180px; height: 180px; border-radius: 50%; overflow: hidden; margin: 0 auto 2rem; border: 4px solid white; box-shadow: var(--shadow-soft);">
-                  <div style="width: 100%; height: 100%; background: var(--grad-primary); display: flex; align-items: center; justify-content: center; font-size: 5rem;">🧬</div>
-               </div>
-               <h3 style="margin-bottom: 0.2rem;">Dr. M. K. Gawali</h3>
-               <p style="color: var(--primary); font-weight: 700; font-size: 0.9rem;">Forum Coordinator</p>
-            </div>
-          </div>
+  <div class="reveal stagger-1" style="text-align: center;">
+    <div style="width: 180px; height: 180px; border-radius: 50%; overflow: hidden; margin: 0 auto 2rem; border: 4px solid white; box-shadow: var(--shadow-soft);">
+      <img src="/sawant_sir.jpg" alt="Hon. Dr. T. J. Sawant" style="width: 100%; height: 100%; object-fit: cover;" />
+    </div>
+    <h3 style="margin-bottom: 0.2rem;">Hon. Dr. T. J. Sawant</h3>
+    <p style="color: var(--primary); font-weight: 700; font-size: 0.9rem;">Founder Secretory JSPM<br>Chief Patron</p>
+  </div>
+
+  <div class="reveal stagger-2" style="text-align: center;">
+    <div style="width: 180px; height: 180px; border-radius: 50%; overflow: hidden; margin: 0 auto 2rem; border: 4px solid white; box-shadow: var(--shadow-soft);">
+      <img src="/Principal_Passport_Photo.png" alt="Dr. P. A. Patil" style="width: 100%; height: 100%; object-fit: cover;" />
+    </div>
+    <h3 style="margin-bottom: 0.2rem;">Dr. P. A. Patil</h3>
+    <p style="color: var(--primary); font-weight: 700; font-size: 0.9rem;">Chair Person (Principal JSCOE)</p>
+  </div>
+
+  <div class="reveal stagger-3" style="text-align: center;">
+    <div style="width: 180px; height: 180px; border-radius: 50%; overflow: hidden; margin: 0 auto 2rem; border: 4px solid white; box-shadow: var(--shadow-soft);">
+      <img src="/AIDSHOD.png" alt="Dr. M. K. Gawali" style="width: 100%; height: 100%; object-fit: cover;" />
+    </div>
+    <h3 style="margin-bottom: 0.2rem;">Dr. M. K. Gawali</h3>
+    <p style="color: var(--primary); font-weight: 700; font-size: 0.9rem;">AIDS HOD<br>Forum Coordinator</p>
+  </div>
+</div>
           
           <div class="reveal stagger-1" style="margin-top: 5rem; padding: 4rem; background: white; border-radius: 40px; border: 1px solid var(--border); text-align: center;">
              <h4 style="font-size: 1.2rem; color: var(--text-main); margin-bottom: 2.5rem; letter-spacing: 0.1em; text-transform: uppercase;">Core Committee - Heads of Departments</h4>
