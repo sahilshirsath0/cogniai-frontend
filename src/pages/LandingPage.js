@@ -21,12 +21,16 @@ export const LandingPage = () => {
           <button class="btn btn-outline" style="border-radius: 50px; font-size: 0.9rem;" onclick="window.app.navigate('login')">LogIn</button>
           <button class="btn btn-primary" style="border-radius: 50px; font-size: 0.9rem; padding: 0.75rem 1.8rem;" onclick="window.app.navigate('login')">Get Started</button>
         </div>
+        <div class="mobile-menu-btn" onclick="document.querySelector('.nav-links').classList.toggle('active')">
+  ☰
+</div>
+
       </nav>
 
       <!-- 1. HERO SECTION -->
       <section class="hero" style="display: flex; align-items: center; background: white;">
         <!-- Animated Background Shapes -->
-        <div class="bg-shape" style="width: 500px; height: 500px; background: rgba(37, 99, 235, 0.08); top: -10%; left: -10%;"></div>
+        <div class="bg-shape" style="width: 500px; height: 500px;  background: rgba(37, 99, 235, 0.08); top: -10%; left: -10%;"></div>
         <div class="bg-shape" style="width: 400px; height: 400px; background: rgba(79, 70, 229, 0.08); bottom: -10%; right: -10%; animation-delay: -7s;"></div>
 
         <div class="container">
@@ -317,7 +321,7 @@ export const LandingPage = () => {
 
       <!-- 7. WHY STANDS OUT -->
       <section style="background: white;">
-        <div class="container">
+        <div class="container isnot">
            <div class="reveal" style="max-width: 900px; margin: 0 auto; text-align: center; background: var(--lavender); padding: 5rem; border-radius: 40px; border: 1px dashed var(--primary);">
               <h2 style="font-size: 2.2rem; line-height: 1.4; color: var(--text-main);">
                 "COGNI AI Forum is not just an activity-based committee — it is a <span style="color: var(--primary);">structured, AI-powered digital ecosystem</span> that centralizes collaboration and enhances institutional performance."
@@ -328,7 +332,7 @@ export const LandingPage = () => {
 
       <!-- 8. CALL TO ACTION -->
       <section style="padding: 0; margin-bottom: 5rem;">
-        <div class="container">
+        <div class="container future">
           <div class="reveal" style="background: var(--grad-primary); border-radius: 50px; padding: 8rem 4rem; text-align: center; color: white; position: relative; overflow: hidden;">
             <div style="position: relative; z-index: 2;">
               <h2 style="color: white; font-size: 4rem; margin-bottom: 2rem;">Join the Future of Artificial Intelligence</h2>
